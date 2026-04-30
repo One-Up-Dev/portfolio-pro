@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolio · Data Scientist</title>
+
+<script>
+  (function () {
+    var t = localStorage.getItem('theme');
+    if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="root"></div>
+
+<script type="module" src="./app.jsx"></script>
+
+<script>
+(function setupReveal() {
+  const io = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    }
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+
+  const seen = new WeakSet();
+  function scan() {
+    document.querySelectorAll('.reveal:not(.is-visible)').forEach((el) => {
+      if (seen.has(el)) return;
+      seen.add(el);
+      io.observe(el);
+    });
+  }
+  const mo = new MutationObserver(scan);
+  mo.observe(document.body, { childList: true, subtree: true });
+  scan();
+})();
+</script>
+</body>
+</html>
