@@ -668,7 +668,7 @@ function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <div className="brand">
-              <span className="brand-logo"><img src="assets/logo.png" alt="logo"/></span>
+              <span className="brand-logo"><img src={logoUrl} alt="logo"/></span>
               <span className="brand-name"><span>Prénom Nom</span><span className="role">data scientist · placeholder</span></span>
             </div>
             <p>Portfolio personnel · construit en HTML statique. Dernière mise à jour : placeholder.</p>
