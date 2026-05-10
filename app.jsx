@@ -669,7 +669,7 @@ function Footer() {
           <div className="footer-brand">
             <div className="brand">
               <span className="brand-logo"><img src={logoUrl} alt="logo"/></span>
-              <span className="brand-name"><span>Prénom Nom</span><span className="role">data scientist · placeholder</span></span>
+              <span className="brand-name"><span>Fabrice</span><span className="role">data scientist · placeholder</span></span>
             </div>
             <p>Portfolio personnel · construit en HTML statique. Dernière mise à jour : placeholder.</p>
           </div>
@@ -682,9 +682,9 @@ function Footer() {
           </div>
           <div className="footer-links">
             <h4>Présence</h4>
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Kaggle</a>
+            <a href="https://github.com/One-Up-Dev">GitHub</a>
+            <a href="https://www.linkedin.com/in/fabrice-sousa-a49118393/">LinkedIn</a>
+            <a href="oneup-blog.vercel.app/">Blog</a>
             <a href="#">Google Scholar</a>
           </div>
           <div className="footer-links">
